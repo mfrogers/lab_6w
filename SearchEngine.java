@@ -41,9 +41,7 @@ public class SearchEngine {
                 // Note that IDF are global and not related to a specific song
                 // But TF values for a query word is different among different songs
                 
-                ////////////////////////////
-                //WRITE HERE
-                //////////////////////////
+                score += TFValues.get(songTitle).get(queryWord) * IDFValues.get(queryWord);
             }
             
             if (score>maxScore)
